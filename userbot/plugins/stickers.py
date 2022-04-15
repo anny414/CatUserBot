@@ -68,10 +68,10 @@ def verify_cond(catarray, text):
 
 def pack_name(userid, pack, is_anim, is_video):
     if is_anim:
-        return f"anny_{userid}_{pack}_anim"
+        return f"TheAnnyOP_Vol{pack}_anim"
     if is_video:
-        return f"anny_{userid}_{pack}_vid"
-    return f"anny_{userid}_{pack}"
+        return f"TheAnnyOP_Vol{pack}_vid"
+    return f"TheAnnyOP_Vol{pack}"
 
 
 def char_is_emoji(character):
@@ -656,7 +656,7 @@ async def pussycat(args):
         await edit_delete(args, "`I can't convert that...`")
         return
     cmd = "/newvideo"
-    packname = f"Cat_{userid}_temp_pack"
+    packname = f"BadCat_{userid}_temp_pack"
     response = urllib.request.urlopen(
         urllib.request.Request(f"http://t.me/addstickers/{packname}")
     )
@@ -681,7 +681,7 @@ async def pussycat(args):
             "/newvideo",
             args,
             1,
-            "Cat",
+            "BadCat",
             True,
             "😂",
             packname,
